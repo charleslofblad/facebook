@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ ********************************************************************
+ * @category   Belvg
+ * @package    BelVG_FacebookFree
+ * @author Pavel Novitsky <pavel@belvg.com>
+ * @copyright  Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="BelVG\FacebookFree\Block\Link" name="facebookfree.link" after="authorization-link"/>
+        </referenceBlock>
+        <referenceContainer name="before.body.end">
+            <block class="BelVG\FacebookFree\Block\Init" name="facebookfree.init" template="BelVG_FacebookFree::init.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ ********************************************************************
+ * @category   Belvg
+ * @package    BelVG_FacebookFree
+ * @author Pavel Novitsky <pavel@belvg.com>
+ * @copyright  Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="facebookfree" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Facebook Connect Free</label>
+            <tab>belvg</tab>
+            <resource>BelVG_FacebookFree::config_facebookfree</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+                <field id="enable" translate="label comment" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="appid" translate="label comment" sortOrder="15" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Application Id</label>
+                    <backend_model>BelVG\FacebookFree\Model\Config\Backend\Appid</backend_model>
+                    <comment><![CDATA[<a href="https://developers.facebook.com/apps/" target="_blank">Create</a> your Facebook Application Id]]></comment>
+                </field>
+                <field id="secret" translate="label comment" sortOrder="25" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Secret Key</label>
+                    <backend_model>BelVG\FacebookFree\Model\Config\Backend\Secret</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
